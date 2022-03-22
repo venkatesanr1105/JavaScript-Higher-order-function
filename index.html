@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Higher order functions</title>
+    </head>
+    <body>
+        <h1>Let's look at an eaxample of a higher order function</h1>
+        <p>Without a higher order function, if I want to add one to each number in an array and display it in the console, I can do the following:</p>
+        <code>
+            const numbers = [1,2,3,4,5]; <br>
+            function addOne(array) <br>
+            { <br>
+                for(let i=0;i &lt; array.length;i++) <br>
+                document.getElementsByTagName('li')[i].innerText = array[i]+1; <br>
+            } <br>
+            addOne(numbers); <br>
+        </code>
+        <h1>Output</h1>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <p>
+            However, using what may be the most most higher order function, forEach(), we can simplify this process:
+        </p>
+        <code>
+            const numbers = [1,2,3,4,5]; <br>
+            numbers.forEach((numbers =&gt; console.log(numbe+1)); <br>
+        </code>
+        <h1>Output</h1>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <br><hr><br>
+        <h1>Another higher order function example</h1>
+        <p>Without a higher order function, if I wanted to create a new array that only has the odd numbers from the numbers array, I could do the following:</p>
+        <code>
+            numbers.forEach((number) => console.log(number+1)); <br>
+            addOne(numbers,5); <br>
+            function isOdd(array,oddArr=[]) <br>
+            {   <br>
+                for(let i=0;i&lt;garray.length;i++) <br>
+                { <br>
+                    if(array[i]%2!=0) <br>
+                        oddArr.push(array[i]); <br>
+                }       <br>
+                return oddArr; <br>
+            } <br>
+            let oddArr = isOdd(numbers); <br>
+            console.log(oddArr);<br>
+        </code>
+        <h1>Output</h1>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <p>If we use higher order function, filter(), we can abstract so much:</p>
+        <code>
+            oddArr = numbers.filter((number) =&gt; number%2!=0); <br>
+            console.log(oddArr); <br>
+        </code>
+        <h1>Output</h1>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <script src="assets/index.js"></script>
+    </body>
+</html>
